@@ -1,0 +1,36 @@
+{
+    "model" : {
+        "backend":              "Tiny Yolo",
+        "input_size":           416,
+        "anchors":              [0.87, 1.64, 1.37, 5.87],
+        "max_box_per_image":    6,        
+        "labels":               ["BlueWhiting", "Mackerel", "Benthosema", "Herring"]
+    },
+
+    "train": {
+        "train_image_folder":   "./Data/train_imgs/",
+        "train_annot_folder":   "./Data/train_annot/",
+          
+        "train_times":          8,
+        "pretrained_weights":   "tiny_yolo_backend.h5",
+        "batch_size":           32,
+        "learning_rate":        1e-4,
+        "nb_epochs":            4,
+        "warmup_epochs":        3,
+
+        "object_scale":         5.0 ,
+        "no_object_scale":      1.0,
+        "coord_scale":          1.0,
+        "class_scale":          1.0,
+	
+        "saved_weights_name":   "new_weights.h5",
+        "debug":                true
+    },
+
+    "valid": {
+        "valid_image_folder":   "./Data/valid_imgs/",
+        "valid_annot_folder":   "./Data/valid_annot/",
+
+        "valid_times":          1
+    }
+}
