@@ -1,0 +1,8 @@
+Forgot to add weight link. The link is specified in the 'Outline of steps' here:
+
+https://github.com/experiencor/keras-yolo2/blob/master/Yolo%20Step-by-Step.ipynb
+
+Link to weights:
+https://pjreddie.com/media/files/yolo.weights
+
+This weight file must be in the same folder as yolo.py.
